@@ -31,7 +31,6 @@ include_once './app/config.php';
 
         <script type="text/javascript" src="/skin/js/jquery.min.js"></script>
         <script type="text/javascript" src="/skin/js/jquery.cookie.min.js"></script>
-        <script type="text/javascript" src="/skin/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/skin/js/scripts.js"></script>
     </head>
     <body>
@@ -52,7 +51,7 @@ include_once './app/config.php';
         </div>
 
         <!-- Bootstrap JS loads after all -->
-        <!--<script type="text/javascript" src="/skin/js/bootstrap.min.js"></script>-->
+        <script type="text/javascript" src="/skin/js/bootstrap.min.js"></script>
 
     </body>
 </html>

@@ -84,11 +84,6 @@ class Ajax
      * @return boolean
      */
     public function login(){
-        /* REMOVE: */
-        $_POST['username'] = "expensifytest@mailinator.com";
-        $_POST['password'] = "hire_me";
-        /* End REMOVE */
-        
         if(!isset($_POST['username']) || !isset($_POST['password'])) return false; // Stop if username or password is not set.
         
         $request = "https://api.expensify.com?"
@@ -124,7 +119,6 @@ class Ajax
                         ."&amount=" . rawurlencode($_GET['transaction']['amount'])
                         ."&merchant=" . rawurlencode($_GET['transaction']['merchant'])
                         ."&comment=" . rawurlencode($_GET['transaction']['comment']);
-//        echo $request;
         echo json_encode($this->buildResponse($this->sendRequest($request)));
     }
     

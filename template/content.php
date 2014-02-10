@@ -33,25 +33,25 @@
                         <div class="form-group">
                                 <label for="inputCreated" class="col-sm-3 control-label">Date</label>
                                 <div class="col-sm-4">
-                                    <input type="date" class="form-control datepicker" id="inputCreated">
+                                    <input type="date" class="form-control datepicker" id="inputCreated" value="<?php echo date("Y-m-d")?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputAmount" class="col-sm-3 control-label">Amount</label>
                                 <div class="col-sm-3">
-                                    <input type="text" class="form-control text-right" id="inputAmount" placeholder="100.00">
+                                    <input type="text" class="form-control text-right" id="inputAmount" placeholder="eg. 100.00">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="inputMerchant" class="col-sm-3 control-label">Merchant</label>
                                 <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="inputMerchant" placeholder="Amazon">
+                                    <input type="text" class="form-control" id="inputMerchant" placeholder="eg. Amazon">
                                 </div>
                             </div>
                         <div class="form-group">
                                 <label for="inputComment" class="col-sm-3 control-label">Comment</label>
                                 <div class="col-sm-8">
-                                    <textarea type="text" class="form-control" id="inputComment" placeholder="Comment for transaction"></textarea>
+                                    <textarea type="text" class="form-control" id="inputComment" placeholder="eg. The Lord of the Rings Collection"></textarea>
                                 </div>
                             </div>
 
@@ -65,10 +65,10 @@
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 <?php else: // Else return login form ?>
-    <form id="form-signin" class="form-signin" role="form">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <input type="email" class="form-control" placeholder="Email address"  autofocus>
-        <input type="password" class="form-control" placeholder="Password" >
-        <a class="submit btn btn-lg btn-primary btn-block">Sign in</a>
+    <form id="form-signin" class="form-signin" role="form" method="post">
+        <h2 class="form-signin-heading">Sign in</h2>
+        <input type="email" name="username" id="username" class="form-control" placeholder="Email address" required="requỉred" autofocus>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="requỉred">
+        <button type="submit" class="submit btn btn-lg btn-primary btn-block">Sign in</button>
     </form>
 <?php endif; ?>
